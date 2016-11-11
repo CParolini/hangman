@@ -1,16 +1,69 @@
 <!DOCTYPE html>
 
+<html lang="en-us">
+
 <head>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="game.js"></script>
+    <!-- Boostrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jQuery Library -->
+    <script type='text/javascript' src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Hangman</title>
 </head>
 
 <body>
-    <h1>The Psychic Game</h1>
-    <p>Guess what letter I'm thinking of.</p>
-    <p>Wins:</p>
-    <p>Losses:</p>
-    <p>Guesses Left:</p>
-    <p>Your Guesses So Far:</p>
+
+    <div class="container">
+        <h1 class="center hangman">NFL Teams Hangman!</h1>
+        <div class="row">
+            <div class="col-lg-6 center hangman">
+                <img src="http://fullhdpictures.com/wp-content/uploads/2015/11/NFL-Logo.png" alt="Pro Logos" height="500px">
+            </div>
+            <div class="col-lg-6 center hangman">
+                <div class="row">
+                    <p>Rules: To begin, type a letter. Good luck!</p>
+                </div>
+                <div id="resetAlert">
+                </div>
+                <ul id="hangman">
+                    <li class="dashes">_</li>
+                    <p>The word you're guessing is 10 letters long.</p>
+                    <p> Previous Inputs: </p>
+                    <p> Clue: I leave a mark on walls...sorry to the maid</p>
+                </div>
+                <div id="gameInfo">
+                    <p>Wins: 0</p>
+                    <p>Losses 0</p>
+                    <p>Lives: 11</p>
+                </div>
+                <div id="lastGuess">
+                </div>
+                <div id="buttons"><button class="letter-button" data-letter="A"><a>A</a></button><button class="letter-button" data-letter="B"><a>B</a></button><button class="letter-button" data-letter="C"><a>C</a></button><button class="letter-button" data-letter="D"><a>D</a></button>
+                    <button
+                        class="letter-button" data-letter="E">
+                        <a>E</a></button><button class="letter-button" data-letter="F"><a>F</a></button><button class="letter-button" data-letter="G"><a>G</a></button><button class="letter-button" data-letter="H"><a>H</a></button><button class="letter-button"
+                            data-letter="I"><a>I</a></button><button class="letter-button" data-letter="J"><a>J</a></button><button class="letter-button" data-letter="K"><a>K</a></button><button class="letter-button" data-letter="L"><a>L</a></button>
+                        <button
+                            class="letter-button" data-letter="M">
+                            <a>M</a></button><button class="letter-button" data-letter="N"><a>N</a></button><button class="letter-button" data-letter="O"><a>O</a></button><button class="letter-button" data-letter="P"><a>P</a></button><button class="letter-button"
+                                data-letter="Q"><a>Q</a></button><button class="letter-button" data-letter="R"><a>R</a></button><button class="letter-button" data-letter="S"><a>S</a></button><button class="letter-button" data-letter="T"><a>T</a></button>
+                            <button
+                                class="letter-button" data-letter="U">
+                                <a>U</a></button><button class="letter-button" data-letter="V"><a>V</a></button><button class="letter-button" data-letter="W"><a>W</a></button><button class="letter-button" data-letter="X"><a>X</a></button><button class="letter-button"
+                                    data-letter="Y"><a>Y</a></button><button class="letter-button" data-letter="Z"><a>Z</a></button></div>
+                <button type="button" class="btn btn-primary" id="resetButton">New Word!</button>
+            </div>
+            <div>Release 2.2</div>
+        </div>
+    </div>
+
+    <script src="assets/js/hangmangame.js"></script>
+
+
 
 </body>
+
+</html>
