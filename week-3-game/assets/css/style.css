@@ -57,10 +57,13 @@ p {
     text-align: center;
 }
 
+#results{
+  margin-top: 150px;
+}
+
 .btn-primary {
     color: #808080;
     background-color: white;
-    margin: 24px 0px 0px 35px;
     border: solid 1px black;
 }
 

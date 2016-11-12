@@ -22,44 +22,25 @@
                 <img src="http://fullhdpictures.com/wp-content/uploads/2015/11/NFL-Logo.png" alt="Pro Logos" height="500px">
             </div>
             <div class="col-lg-6 center hangman">
-                <div class="row">
+                <div id="results">
                     <p>Rules: To begin, start typing!</p>
+                    <div id="hangman">
+                        <p id="dashes"></p>
+                    </div>
+                    <div id="gameInfo">
+                        <p id="wins">Wins: 0</p>
+                        <p id="losses">Losses: 0</p>
+                        <p id="lives">Lives: 6</p>
+                        <button type="button" class="btn btn-primary" id="resetButton">New Word!</button>
+                    </div>
                 </div>
-                <div id="resetAlert">
-                </div>
-                <ul id="hangman">
-                    <p id="dashes">__________</p>
-                    <p>This will tell you some piece of information</p>
-                    <p> Previous Guessed Letters: </p>
-                    <p> Clue:</p>
-                </div>
-                <div id="gameInfo">
-                    <p>Wins: 0</p>
-                    <p>Losses 0</p>
-                    <p>Lives: 11</p>
-                </div>
-                <div id="lastGuess">
-                </div>
-                <div id="buttons"><button class="letter-button" data-letter="A"><a>A</a></button><button class="letter-button" data-letter="B"><a>B</a></button><button class="letter-button" data-letter="C"><a>C</a></button><button class="letter-button" data-letter="D"><a>D</a></button>
-                    <button
-                        class="letter-button" data-letter="E">
-                        <a>E</a></button><button class="letter-button" data-letter="F"><a>F</a></button><button class="letter-button" data-letter="G"><a>G</a></button><button class="letter-button" data-letter="H"><a>H</a></button><button class="letter-button"
-                            data-letter="I"><a>I</a></button><button class="letter-button" data-letter="J"><a>J</a></button><button class="letter-button" data-letter="K"><a>K</a></button><button class="letter-button" data-letter="L"><a>L</a></button>
-                        <button
-                            class="letter-button" data-letter="M">
-                            <a>M</a></button><button class="letter-button" data-letter="N"><a>N</a></button><button class="letter-button" data-letter="O"><a>O</a></button><button class="letter-button" data-letter="P"><a>P</a></button><button class="letter-button"
-                                data-letter="Q"><a>Q</a></button><button class="letter-button" data-letter="R"><a>R</a></button><button class="letter-button" data-letter="S"><a>S</a></button><button class="letter-button" data-letter="T"><a>T</a></button>
-                            <button
-                                class="letter-button" data-letter="U">
-                                <a>U</a></button><button class="letter-button" data-letter="V"><a>V</a></button><button class="letter-button" data-letter="W"><a>W</a></button><button class="letter-button" data-letter="X"><a>X</a></button><button class="letter-button"
-                                    data-letter="Y"><a>Y</a></button><button class="letter-button" data-letter="Z"><a>Z</a></button></div>
-                <button type="button" class="btn btn-primary" id="resetButton">New Word!</button>
             </div>
-            <div>Release 2.2</div>
         </div>
+        <div>Release 2.2</div>
+    </div>
     </div>
 
-    <script src="assets/js/hangmangame.js"></script>
+    <script src="assets/javascript/game.js"></script>
 
 
 
