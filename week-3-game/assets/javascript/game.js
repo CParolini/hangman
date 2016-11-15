@@ -1,7 +1,7 @@
 console.log("this is js");
 
-var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var clues = ["Home City of Dallas", "Nicknamed the G-Men", "City known for Cheessteaks", ""];
+var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var clues = ["Home City of Dallas", "Nicknamed the G-Men", "City known for Cheessteaks", "Offensive Name used toward Native Americans", "They call the Windy City home", "Detroits Finest", "Cheeseheads", "NFC North foes to the Packers", "Home City of Atlanta", "Cam Newton is their starting QB", "Won Super Bowl in 2006", "The other Florida team", "Arizona is their state of choice", "Back to LA", "San Francisco Bay for the win", "Known for the 12th Man", "New Yorks 3rd Wheel Team", "Sunny Miami", "Tom Brady", "J.E.T.S.", "Ray Lewis' former team", "Cincinatti is home", "Believeland (Cleveland)", "Steel City", "Formerly the Oilers", "Famous for Peighton Manning", "The other, other Florida team", "Tennessee", "Denver", "KC", "The Black Hole", "San Diego"];
 var teams = ['cowboys', 'giants', 'eagles', 'redskins', 'bears', 'lions', 'packers', 'vikings', 'falcons', 'panthers', 'saints', 'buccaneers', 'cardinals', 'rams', '49ers', 'seahawks', 'bills', 'dolphins', 'patriots', 'jets', 'ravens', 'bengals', 'browns', 'steelers', 'texans', 'colts', 'jaguars', 'titans', 'broncos', 'chiefs', 'raiders', 'chargers'];
 var wins = 0;
 
@@ -129,9 +129,9 @@ function getAllIndexes(arr, val) {
 
 //Reset button that resets the game and chooses a new word
 $("#resetButton").on("click", function() {
-    resetAlert = "";
-    $("#lastGuess").html("Last word choice was: " + randomWord + "</h1>");
-    document.querySelector("#resetAlert").innerHTML = resetAlert;
+    // resetAlert = "";
+    // $("#lastGuess").html("Last word choice was: " + randomWord + "</h1>");
+    // document.querySelector("#resetAlert").innerHTML = resetAlert;
     writeStats();
     randomWordChoice();
 });

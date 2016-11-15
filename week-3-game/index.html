@@ -9,7 +9,7 @@
     <script type='text/javascript' src="https://code.jquery.com/jquery-2.2.3.js"></script>
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- Font -->
-    <link href="assets/images/nfl.png" alt"NFL">
+    <link href="assets/images/nfl.png" alt "NFL">
     <meta charset="UTF-8">
     <title>Hangman</title>
 </head>
@@ -18,13 +18,13 @@
     <div class="container">
         <h1 class="center hangman">NFL Teams Hangman!</h1>
         <div class="row">
-          <div id="resetAlert"></div>
+            <div id="resetAlert"></div>
             <div class="col-lg-6 center hangman">
                 <img src="http://fullhdpictures.com/wp-content/uploads/2015/11/NFL-Logo.png" alt="Pro Logos" height="500px">
             </div>
             <div class="col-lg-6 center hangman">
                 <div id="results">
-                    <p>Rules: To begin, start typing!</p>
+                    <p>Rules: To begin, start typing! To Reset, press "New Word" twice.</p>
                     <div id="hangman">
                         <p id="dashes"></p>
                     </div>
@@ -32,12 +32,11 @@
                         <p id="wins">Wins: 0</p>
                         <p id="losses">Losses: 0</p>
                         <p id="lives">Lives: 6</p>
-                        <button type="button" onclick="restart()" class="btn btn-primary" id="resetButton">New Word!</button>
                     </div>
+                    <button type="button" class="btn btn-primary" id="resetButton">New Word!</button>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <script src="assets/javascript/game.js"></script>
