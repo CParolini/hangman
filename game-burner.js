@@ -12,49 +12,76 @@ var wrongLetters = [];
 
 // Game Counters
 var winCount = "Wins: " + 0;
-var lossCount ="Losses: " + 0;
+var lossCount = "Losses: " + 0;
 var guessesLeft = "Lives: " + 9;
 
 // Functions (Reusable blocks of code that I will call upon when needed)
 // =========================================
 function startGame() {
-  selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
-  lettersinWord = selectedWord.split("");
-  numBlanks = lettersinWord.length;
+    selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+    lettersinWord = selectedWord.split("");
+    numBlanks = lettersinWord.length;
 
-  // Reset
-  guessesLeft = "Lives: " + 9;
-  wrongLetters = [];
-  blanksAndSuccesses = [];
+    // Reset
+    guessesLeft = "Lives: " + 9;
+    wrongLetters = [];
+    blanksAndSuccesses = [];
 
-  // Populate blanks and success with right number of blanks
-  for (var i=0; i<numBlanks; i++){
-    blanksAndSuccesses.push("_");
-  }
-
-  // Change html to reflect round conditions
-  document.getElementById("dashes").innerHTML = blanksAndSuccesses.join(" ");
-  document.getElementById("lives").innerHTML = guessesLeft;
-  document.getElementById("wins").innerHTML = winCount;
-  document.getElementById("losses").innerHTML = lossCount;
-
-  //testting/debugging
-  console.log(selectedWord);
-  console.log(lettersinWord);
-  console.log(numBlanks);
-  console.log(blanksAndSuccesses);
-}
-
-function checkLetters(letter) {
-  // Check if lettter exist in code at all
-  var isLetterInWord = false;
-  for (var i=0; i,numBlanks; i++) {
-    if (selectedWord[i] == letter) {
-      isLetterInWord = true;
-      alert("Letter Foud");
+    // Populate blanks and success with right number of blanks
+    for (var i = 0; i < numBlanks; i++) {
+        blanksAndSuccesses.push("_");
     }
-  }
+
+    // Change html to reflect round conditions
+    document.getElementById("dashes").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("lives").innerHTML = guessesLeft;
+    document.getElementById("wins").innerHTML = winCount;
+    document.getElementById("losses").innerHTML = lossCount;
+
+    //testting/debugging
+    console.log(selectedWord);
+    console.log(lettersinWord);
+    console.log(numBlanks);
+    console.log(blanksAndSuccesses);
 }
+
+function checkLetters(letter) { // Pick back up at 18:08 on video
+    //Check if letter exists in the code at all
+    var isLetterInWord = false;
+    alert(letter);
+    for (var i = 0; i < numBlanks; i++) {
+        if (selectedWord[i] == letter) {
+            isLetterInWord = true;
+        }
+    }
+    //Check where in the word the letter exist and populate blanks in our array.
+    if (isLetterInWord) {
+      console.log("Test");
+        for (var i = 0; i < numBlanks; i++) {
+            if (selectedWord[i] == letter) {
+                blanksAndSuccesses[i] == letter;
+            }
+        }
+    }
+    else {
+      wrongLetters.push(letter);
+      numGuesses--
+    }
+
+    console.log(blanksAndSuccesses)
+
+}
+
+// function checkLetters(letter) {
+//     // Check if lettter exist in code at all
+//     var isLetterInWord = false;
+//     for (var i = 0; i, numBlanks; i++) {
+//         if (selectedWord[i] == letter) {
+//             isLetterInWord = true;
+//             alert("Letter Foud");
+//         }
+//     }
+// }
 
 // Main Process
 // =========================================
@@ -63,10 +90,10 @@ startGame();
 
 //Register keyclicks
 document.onkeyup = function(event) {
-  var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
-  checkLetters(letterGuessed);
-  // Testing / debugging
-  console.log(letterGuessed);
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+    // checkLetters(letterGuessed);
+    // Testing / debugging
+    console.log(letterGuessed);
 }
 
 
