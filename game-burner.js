@@ -45,32 +45,44 @@ function startGame() {
     console.log(blanksAndSuccesses);
 }
 
-function checkLetters(letter) { // Pick back up at 18:08 on video
-    //Check if letter exists in the code at all
-    var isLetterInWord = false;
-    alert(letter);
-    for (var i = 0; i < numBlanks; i++) {
-        if (selectedWord[i] == letter) {
-            isLetterInWord = true;
-        }
-    }
-    //Check where in the word the letter exist and populate blanks in our array.
-    if (isLetterInWord) {
-      console.log("Test");
-        for (var i = 0; i < numBlanks; i++) {
-            if (selectedWord[i] == letter) {
-                blanksAndSuccesses[i] == letter;
-            }
-        }
-    }
-    else {
-      wrongLetters.push(letter);
-      numGuesses--
-    }
-
-    console.log(blanksAndSuccesses)
-
+function replaceDashWLetter(guess, word, dashes) {
+    var index = word.indexOf(guess);
+    dashes[index] = guess;
+    return dashes;
 }
+
+function haveIWon(dashes) {
+    if (dashes.indexOf('_') === -1) {
+        return "You have won";
+    } else {
+        return "You have not won";
+    }
+}
+
+// function checkLetters(letter) { // Pick back up at 18:08 on video
+//     //Check if letter exists in the code at all
+//     if (lettersinWord.indexOf(letter) !== -1){
+//       var index = lettersinWord.indexOf(letter);
+//       blanksAndSuccesses[index] = letter;
+//       oconsole.log(blanksAndSuccesses);
+//     }
+//Check where in the word the letter exist and populate blanks in our array.
+// if (isLetterInWord) {
+//   console.log("Test");
+//     for (var i = 0; i < numBlanks; i++) {
+//         if (selectedWord[i] == letter) {
+//             blanksAndSuccesses[i] == letter;
+//         }
+//     }
+// }
+// else {
+//   wrongLetters.push(letter);
+//   numGuesses--
+// }
+
+//     console.log(blanksAndSuccesses)
+//
+// }
 
 // function checkLetters(letter) {
 //     // Check if lettter exist in code at all
